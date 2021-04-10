@@ -35,7 +35,7 @@ a.btn {
 @media screen and (max-width: 600px)  {
   h1.header {
     font-weight: bold;
-    font-size: 45px;
+    font-size: 65px;
     padding-top: 35px;
     color: #333;
   }
