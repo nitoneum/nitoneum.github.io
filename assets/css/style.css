@@ -1,7 +1,10 @@
 html, body {
   font-family: sans-serif;
 }
-
+.alert {
+  font-size: 13px;
+  color: #000;
+}
 h1.header {
   font-weight: bold;
   font-size: 75px;
