@@ -4,6 +4,7 @@ html, body {
 .alert {
   font-size: 13px;
   color: #000;
+  text-align: center;
 }
 h1.header {
   font-weight: bold;
