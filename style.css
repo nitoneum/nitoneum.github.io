@@ -28,13 +28,3 @@ a, a:hover, a:visited {
 a.btn {
   color: white;
 }
-@media screen and (max-width: 414px) {
-    .sm {
-      display: block;
-    }
-}
-@media screen and (min-width: 414px) {
-    .sm {
-      display: none;
-    }
-}
