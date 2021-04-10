@@ -1,0 +1,39 @@
+html, body {
+  font-family: sans-serif;
+  text-align: center;
+}
+h1.header {
+  font-weight: bold;
+
+  font-size: 75px;
+  padding-top: 35px;
+  color: #333;
+}
+h1.header a {
+  color: #333;
+  text-decoration: none;
+} h1.header a:hover {
+  text-decoration: underline;
+}
+
+.navbar { border-top: 1px solid #4a4a4a; }
+.navbar-brand { font-size: 1rem; }
+
+
+a, a:hover, a:visited {
+  color: #0000FF;
+  display: inline-block;
+}
+a.btn {
+  color: white;
+}
+@media screen and (max-width: 414px) {
+    .sm {
+      display: block;
+    }
+}
+@media screen and (min-width: 414px) {
+    .sm {
+      display: none;
+    }
+}
