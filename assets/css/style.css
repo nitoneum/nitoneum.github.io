@@ -27,7 +27,10 @@ h1.header a:hover {
 .intro-text {
   text-align: center;
 }
-
+li a, li a:hover, li a:visited {
+  color: #333;
+  text-decoration: none;
+}
 a, a:hover, a:visited {
   color: #0000FF;
   display: inline-block;
