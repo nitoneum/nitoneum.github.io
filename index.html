@@ -32,14 +32,14 @@
           </div>
         </p>
         <p class="text-muted text-center" style="font-size:13px;">
-          &copy; 2021 <a href="/" class="text-muted">nitoneum.com</a> &bull; <a href="#" id="toastLink" class="text-muted">Documentation</a>
+          &copy; 2021 <a href="/" class="text-muted">nitoneum.com</a> &bull; <a href="#" id="toastLink2" class="text-muted">Documentation</a>
         </p>
       </div>
-      <!-- Flexbox container for aligning the toasts -->
-      <div aria-live="assertive" aria-atomic="true" class="top-0 start-50">
 
-        <!-- Then put toasts within -->
-        <div class="toast" role="alert" id="docToast" aria-live="assertive" aria-atomic="true">
+        <div aria-live="polite" aria-atomic="true" class="position-relative">
+
+
+        <div id="docToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
           <div class="toast-header">
           <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
           <strong class="me-auto">Nitoneum</strong>
@@ -65,6 +65,11 @@
         delay: 2000
       };
       document.getElementById("toastLink").onclick = function() {
+        var toastMessage = document.getElementById('docToast');
+        var bsAlert = new bootstrap.Toast(toastMessage, options);
+        bsAlert.show();
+      };
+      document.getElementById("toastLink2").onclick = function() {
         var toastMessage = document.getElementById('docToast');
         var bsAlert = new bootstrap.Toast(toastMessage, options);
         bsAlert.show();
