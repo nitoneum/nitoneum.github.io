@@ -46,11 +46,11 @@
         <br><br>
         <hr>
           <div class="alert alert-primary" role="alert">
-            <i class="bi bi-info-circle-fill"></i> If you can keep a node running that accepts incoming connections, you'll really be helping the nitoneum network a lot. &mdash; <a href="/docs/#node-setup">Learn more &raquo;</a>
+            <i class="bi bi-info-circle-fill"></i> If you can keep a node running that accepts incoming connections, you'll really be helping the nitoneum network a lot. &mdash; <a href="#" id="toastLink2">Learn more &raquo;</a>
           </div>
         </p>
         <p class="text-muted text-center" style="font-size:13px;">
-          &copy; 2021 <a href="/" class="text-muted">nitoneum.com</a> &bull; <a href="#" id="toastLink2" class="text-muted">Documentation</a>
+          &copy; 2021 <a href="/" class="text-muted">nitoneum.com</a> &bull; <a href="#" id="toastLink3" class="text-muted">Documentation</a>
         </p>
       </div>
 
@@ -72,6 +72,11 @@
         bsAlert.show();
       };
       document.getElementById("toastLink2").onclick = function() {
+        var toastMessage = document.getElementById('docToast');
+        var bsAlert = new bootstrap.Toast(toastMessage, options);
+        bsAlert.show();
+      };
+      document.getElementById("toastLink3").onclick = function() {
         var toastMessage = document.getElementById('docToast');
         var bsAlert = new bootstrap.Toast(toastMessage, options);
         bsAlert.show();
