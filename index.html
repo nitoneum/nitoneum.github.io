@@ -61,12 +61,11 @@
         animation: true,
         delay: 2000
       };
-      document.querySelector("#toastLink").addEventListener("click", function(event) {
-        var toastHTMLElement = document.getElementById("docToast");
-        var toastElement = new bootstrap.Toast(toastHTMLElement, option);
-        toastElement.show();
-        event.preventDefault();
-      }, false);
+      document.getElementById("toastLink").onclick = function() {
+        var toastMessage = document.getElementById('docToast');
+        var bsAlert = new bootstrap.Toast(toastMessage, options);
+        bsAlert.show();
+      };
     </script>
   </body>
 </html>
