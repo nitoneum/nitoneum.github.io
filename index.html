@@ -20,7 +20,7 @@
         </h1>
         <p class="intro-text">nitoneum is a peer-to-peer electronic cash system that enables instant payments to anyone in the world. it is based on the <a href="//litecoin.org" target="_blank">Litecoin Project</a>, which means it's fast and have lower transaction fees. nitoneum is currently in a very early stage and therefore the coins must be generated (mined).
         <br>
-          <a href="/docs" style="font-size:13px;" class="text-muted">Read the Documentation</a>
+          <a href="#" style="font-size:13px;" id="toast-link" class="text-muted">Read the Documentation</a>
         <br><br>
         <a href="download" class="btn btn-success btn-lg disabled" title="Download Nitoneum Core 0.1">
           <strong><i class="bi bi-file-earmark-arrow-down-fill"></i> nitoneum-qt 0.1</strong>
@@ -32,7 +32,7 @@
           </div>
         </p>
         <p class="text-muted text-center" style="font-size:13px;">
-          &copy; 2021 <a href="/" class="text-muted">nitoneum.com</a> &bull; <a href="#" onclick="toast.show()" class="text-muted">Documentation</a>
+          &copy; 2021 <a href="/" class="text-muted">nitoneum.com</a> &bull; <a href="#" id="toast-link" class="text-muted">Documentation</a>
         </p>
       </div>
 	    </div>
@@ -41,11 +41,11 @@
       <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
 
         <!-- Then put toasts within -->
-        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast" role="alert" id="docs-toast" aria-live="assertive" aria-atomic="true">
           <div class="toast-header">
-            <img src="..." class="rounded me-2" alt="...">
+            <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
             <strong class="me-auto">Nitoneum</strong>
-            <small>11 mins ago</small>
+            <small>Just now</small>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
           <div class="toast-body">
@@ -57,10 +57,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-    var toastList = toastElList.map(function (toastEl) {
-    return new bootstrap.Toast(toastEl, option)
-    })
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl, option)
+        })
+        document.getElementById("toast-link").onclick = function() {
+            var myAlert = document.getElementById('docs-toast');//select id of toast
+            var bsAlert = new bootstrap.Toast(myAlert);//inizialize it
+            bsAlert.show();//show it
+        }
     </script>
   </body>
 </html>
