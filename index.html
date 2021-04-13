@@ -20,7 +20,7 @@
         </h1>
         <p class="intro-text">nitoneum is a peer-to-peer electronic cash system that enables instant payments to anyone in the world. it is based on the <a href="//litecoin.org" target="_blank">Litecoin Project</a>, which means it's fast and have lower transaction fees. nitoneum is currently in a very early stage and therefore the coins must be generated (mined).
         <br>
-          <a href="" style="font-size:13px;" onclick="Toasty()" class="text-muted">Read the Documentation</a>
+          <a href="#" style="font-size:13px;" id="toastLink" onclick="Toasty()" class="text-muted">Read the Documentation</a>
         <br><br>
         <a href="download" class="btn btn-success btn-lg disabled" title="Download Nitoneum Core 0.1">
           <strong><i class="bi bi-file-earmark-arrow-down-fill"></i> nitoneum-qt 0.1</strong>
@@ -32,7 +32,7 @@
           </div>
         </p>
         <p class="text-muted text-center" style="font-size:13px;">
-          &copy; 2021 <a href="/" class="text-muted">nitoneum.com</a> &bull; <a href="" onclick="Toasty()" class="text-muted">Documentation</a>
+          &copy; 2021 <a href="/" class="text-muted">nitoneum.com</a> &bull; <a href="#" id="toastLink" onclick="Toasty()" class="text-muted">Documentation</a>
         </p>
       </div>
 	    </div>
@@ -61,9 +61,12 @@
         delay: 2000
       };
       function Toasty() {
-        var toastHTMLElement = document.getElementById("docToast");
-        var toastElement = new bootstrap.Toast(toastHTMLElement, option);
-        toastElement.show();
+        document.querySelector("#toastLink").addEventListener("click", function(event) {
+          var toastHTMLElement = document.getElementById("docToast");
+          var toastElement = new bootstrap.Toast(toastHTMLElement, option);
+          toastElement.show();
+          event.preventDefault();
+        }, false);
       }
     </script>
   </body>
